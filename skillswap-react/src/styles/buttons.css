@@ -1,0 +1,150 @@
+.buttons {
+    display: flex;
+    gap: 1rem;
+    animation: fadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+}
+
+.hero .buttons .btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+}
+
+.hero .buttons .btn-primary {
+    background-color: #4066FF !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(64, 102, 255, 0.2);
+}
+
+.hero .buttons .btn-primary:hover {
+    background-color: #3557ee !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(64, 102, 255, 0.3);
+}
+
+.hero .buttons .btn-secondary {
+    background-color: transparent !important;
+    color: #4066FF !important;
+    border: 2px solid #4066FF !important;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .buttons .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #4066FF;
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.hero .buttons .btn-secondary:hover::before {
+    width: 100%;
+}
+
+.hero .buttons .btn-secondary:hover {
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(64, 102, 255, 0.2);
+}
+
+.btn-join {
+    background-color: var(--primary-color);
+    color: var(--text-light) !important;
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 50px !important;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.2);
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.btn-join i {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+.btn-join:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Responsive styles for buttons */
+@media screen and (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .btn-primary {
+        background: var(--primary-color);
+        margin: 0;
+    }
+
+    .btn-secondary {
+        margin: 0;
+        border: 2px solid var(--primary-color);
+    }
+}
+
+/* Touch device specific styles */
+@media (hover: none) and (pointer: coarse) {
+    .btn:active {
+        transform: scale(0.98);
+    }
+} 

@@ -1,0 +1,47 @@
+.auth-required {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-required h2 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #4066FF 0%, #2949c6 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-required p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.auth-required .login-btn {
+  padding: 0.75rem 2rem;
+  background: #4066FF;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-required .login-btn:hover {
+  background: #3557ee;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .auth-required {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+} 

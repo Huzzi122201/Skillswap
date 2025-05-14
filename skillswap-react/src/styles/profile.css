@@ -1,0 +1,343 @@
+.profile-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.profile-avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4066FF;
+  background: #e5e7eb;
+}
+
+.avatar-upload {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-upload-label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.upload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.avatar-upload-label:hover .upload-overlay {
+  opacity: 1;
+}
+
+.upload-overlay svg {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.profile-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-title h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #1f2937;
+}
+
+.user-email {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.edit-input {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #4066FF;
+  box-shadow: 0 0 0 2px rgba(64, 102, 255, 0.1);
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-btn {
+  background: #4066FF;
+  color: white;
+  border: none;
+}
+
+.edit-btn:hover {
+  background: #2949c6;
+}
+
+.save-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+}
+
+.save-btn:hover {
+  background: #059669;
+}
+
+.cancel-btn {
+  background: white;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+.cancel-btn:hover {
+  background: #f3f4f6;
+}
+
+.profile-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.skill-input-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.skill-input-group input,
+.skill-input-group select {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.skill-input-group input:focus,
+.skill-input-group select:focus {
+  outline: none;
+  border-color: #4066FF;
+  box-shadow: 0 0 0 2px rgba(64, 102, 255, 0.1);
+}
+
+.skill-input-group button {
+  padding: 0.5rem 1rem;
+  background: #4066FF;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.skill-input-group button:hover {
+  background: #2949c6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.skill-card h4 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0.25rem 0;
+}
+
+.remove-skill-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover .remove-skill-btn {
+  opacity: 1;
+}
+
+.remove-skill-btn:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .profile-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .skill-input-group {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid #e5e7eb;
+  border-radius: 50%;
+  border-top-color: #4066FF;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background: #fef2f2;
+  border-radius: 0.75rem;
+  border: 1px solid #fee2e2;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.error-container p {
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.error-container button {
+  padding: 0.5rem 1rem;
+  background: #4066FF;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.error-container button:hover {
+  background: #2949c6;
+} 

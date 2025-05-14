@@ -1,0 +1,221 @@
+.hero-wrapper {
+    width: 100%;
+    background: linear-gradient(145deg, #f8faff 0%, #f0f4ff 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: calc(100vh - 60px);
+    padding: 0;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding: 120px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 32px;
+}
+
+.hero-content h1 {
+    font-size: 72px;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -0.03em;
+    opacity: 0;
+    transform: translateY(20px);
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+    background: linear-gradient(
+        to right,
+        #1f2937 20%,
+        #4066FF 30%,
+        #3557ee 70%,
+        #1f2937 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: 
+        slideIn 1s ease-out forwards,
+        shine 6s linear infinite;
+    text-shadow: 0 0 10px rgba(64, 102, 255, 0.1);
+}
+
+.hero-content h1 span {
+    display: block;
+    width: 100%;
+    line-height: 1.1;
+    padding: 0;
+}
+
+.hero-content h1 br {
+    display: none;
+}
+
+.hero-content h1 span:nth-child(2) {
+    animation-delay: 0.2s;
+    margin-top: 0;
+}
+
+.hero-content p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0;
+    max-width: 650px;
+    font-weight: 400;
+    text-align: left;
+    animation: fadeIn 1s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 100%;
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: #4066FF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3557ee;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #4066FF;
+    border: 2px solid #4066FF;
+}
+
+.btn-secondary:hover {
+    background: rgba(64, 102, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-wrapper {
+        min-height: calc(100vh - 60px);
+    }
+
+    .hero-content {
+        padding: 80px 0 0 20px;
+    }
+
+    .hero {
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 56px;
+        line-height: 1.3;
+        padding-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-wrapper {
+        min-height: calc(100vh - 60px);
+    }
+
+    .hero-content {
+        padding: 60px 0 0 20px;
+    }
+
+    .hero {
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        line-height: 1.3;
+        padding-bottom: 6px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        text-align: left;
+        padding: 0;
+    }
+} 
